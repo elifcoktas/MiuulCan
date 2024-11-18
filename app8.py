@@ -6,8 +6,11 @@ import joblib
 import time
 
 # Load Pre-Trained Model and Feature Names
-model = joblib.load(r"C:\Users\okank\Downloads\xgb_model.pkl")
-feature_names = joblib.load(r"C:\Users\okank\Downloads\feature_names.pkl")
+feature_names = joblib.load("feature_names.pkl")
+
+# Model dosyasını dinamik olarak aynı klasörden yükler.
+model = joblib.load("xgb_model.pkl")
+
 
 # Page Configuration
 st.set_page_config(page_title="Promotion Prediction with MiuulCan", layout="centered")
